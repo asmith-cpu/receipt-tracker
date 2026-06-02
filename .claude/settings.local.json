@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm list *)",
+      "Bash(npm --version)",
+      "PowerShell(node --version)",
+      "PowerShell(npm --version)",
+      "PowerShell(npm list -g @anthropic-ai/claude-code 2>&1)",
+      "PowerShell(winget install OpenJS.NodeJS.LTS --accept-source-agreements --accept-package-agreements)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"User\"\\); node --version; npm --version)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"User\"\\); npm install -g @anthropic-ai/claude-code)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"User\"\\); claude --version)",
+      "PowerShell(npm --version 2>&1)",
+      "PowerShell(node --version 2>&1)",
+      "PowerShell(claude --version 2>&1)",
+      "PowerShell([System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"Machine\"\\) -split \";\" | Select-String -Pattern \"node|npm\" -SimpleMatch)",
+      "PowerShell([System.Environment]::GetEnvironmentVariable\\(\"PATH\", \"User\"\\) -split \";\" | Select-String -Pattern \"node|npm|roaming|appdata\" -SimpleMatch -CaseSensitive:$false)",
+      "PowerShell(Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force)",
+      "PowerShell(Get-ExecutionPolicy -Scope CurrentUser)",
+      "PowerShell(Get-ExecutionPolicy -List)",
+      "PowerShell(Unblock-File -Path \"C:\\\\Users\\\\ASmith\\\\AppData\\\\Roaming\\\\npm\\\\claude.ps1\")",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "PowerShell(wrangler *)",
+      "PowerShell(wrangler secret *)",
+      "PowerShell(Start-Process powershell -ArgumentList '-NoExit', '-Command', 'cd \"C:\\\\Program Files \\(x86\\)\\\\Projects\\\\receipt-tracker\"; npm run dev')"
+    ]
+  }
+}
